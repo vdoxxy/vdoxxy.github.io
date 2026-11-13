@@ -430,11 +430,81 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   padding: 10px 10px 40px;
   background: #e9e6db;
   border-radius: 2px;
+  perspective: 1200px;
   transform: rotate(-3deg);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s var(--ease);
 }
 .portrait:hover .portrait__frame { transform: rotate(-1deg) translateY(-4px); }
+
+/* Переворот аватара: спереду фото, ззаду — короткі факти */
+.portrait__flip {
+  position: relative;
+  border-radius: 1px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s var(--ease);
+  cursor: pointer;
+}
+.portrait__face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.portrait__face--front { position: relative; }
+.portrait__flip.is-flipped { transform: rotateY(180deg); }
+@media (hover: hover) and (pointer: fine) {
+  .portrait__frame:hover .portrait__flip { transform: rotateY(180deg); }
+}
+
+.portrait__face--back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+  background: var(--acid);
+  color: #0b0b0c;
+  border-radius: 1px;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+.portrait__back-mark {
+  position: absolute;
+  top: 6px; right: 10px;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  opacity: 0.3;
+}
+.portrait__back-kicker {
+  margin: 0 0 12px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.portrait__facts {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+}
+.portrait__facts div { display: grid; gap: 1px; }
+.portrait__facts dt {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.62;
+}
+.portrait__facts dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
 .portrait__frame img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -444,7 +514,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 }
 .portrait__tape {
   position: absolute;
-  top: -12px; left: 50%;
+  top: -22px; left: 50%;
   width: 92px; height: 26px;
   background: rgba(217, 255, 75, 0.78);
   transform: translateX(-50%) rotate(2deg);
@@ -452,7 +522,7 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
 }
 .portrait__sticker {
   position: absolute;
-  right: -14px; bottom: 18px;
+  right: -14px; bottom: -22px;
   padding: 7px 12px;
   background: var(--acid);
   color: #0b0b0c;
@@ -477,6 +547,34 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   color: var(--text-3);
 }
 .portrait__caption span:first-child { color: var(--text); }
+.portrait__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  margin: 4px 0 0;
+  padding: 6px 4px;
+  border: 0;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: color 0.25s;
+}
+.portrait__toggle span[aria-hidden] {
+  color: var(--acid);
+  font-size: 12px;
+  line-height: 1;
+}
+.portrait__toggle:hover { color: var(--text); }
+.portrait__toggle:focus-visible {
+  outline: 1px solid var(--acid);
+  outline-offset: 2px;
+  color: var(--text);
+}
 
 /* Тікер */
 .ticker {
@@ -1068,6 +1166,13 @@ h1, h2, h3, p, figure, blockquote { margin: 0; }
   .portrait { width: 232px; margin: 0 auto; }
   .portrait__frame { padding: 8px 8px 34px; }
   .portrait__caption { font-size: 9.5px; }
+  .portrait__tape { top: -20px; }
+  .portrait__sticker { right: -12px; bottom: -16px; }
+  .portrait__face--back { padding: 15px 13px; }
+  .portrait__back-kicker { margin-bottom: 8px; font-size: 8px; }
+  .portrait__facts { gap: 7px; }
+  .portrait__facts dt { font-size: 8px; }
+  .portrait__facts dd { font-size: 12.5px; }
 
   .section { padding: 64px 0; }
   .section__head { margin-bottom: 32px; }

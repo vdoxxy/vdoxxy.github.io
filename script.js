@@ -417,6 +417,29 @@ document.documentElement.classList.add('js');
     }
   }
 
+  /* ---------- Переворот аватара ---------- */
+  const flipCard = document.querySelector('.portrait__flip');
+  const flipToggle = document.querySelector('.portrait__toggle');
+
+  if (flipCard && flipToggle) {
+    const flipLabel = flipToggle.querySelector('.portrait__toggle-text');
+
+    function setFlip(on) {
+      flipCard.classList.toggle('is-flipped', on);
+      flipToggle.setAttribute('aria-pressed', String(on));
+      if (flipLabel) {
+        flipLabel.textContent = on ? 'приховати факти' : 'показати факти';
+      }
+    }
+
+    function toggleFlip() {
+      setFlip(!flipCard.classList.contains('is-flipped'));
+    }
+
+    flipToggle.addEventListener('click', toggleFlip);
+    flipCard.addEventListener('click', toggleFlip);
+  }
+
   /* ---------- Рік у футері ---------- */
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
