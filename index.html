@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vdoxxy — вайбкодер та інді-розробник</title>
+  <meta name="description" content="vdoxxy — вайбкодер та інді-розробник. Python, Java, C++, Unity, Blender. Перша гра та моди для Minecraft." />
+  <meta name="theme-color" content="#0b0b0c" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="vdoxxy — вайбкодер та інді-розробник" />
+  <meta property="og:description" content="Python, Java, C++, Unity, Blender. Перша гра в процесі." />
+  <meta property="og:locale" content="uk_UA" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Перейти до вмісту</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <div class="bg" aria-hidden="true">
+    <span class="bg__glow bg__glow--1"></span>
+    <span class="bg__glow bg__glow--2"></span>
+    <span class="bg__glow bg__glow--3"></span>
+    <span class="bg__grid"></span>
+    <canvas class="bg__rain" id="rain" aria-hidden="true"></canvas>
+    <span class="bg__spot"></span>
+    <span class="bg__noise"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top">
+        <span class="logo__mark" aria-hidden="true">✳</span>
+        <span class="logo__text">vdoxxy</span>
+        <span class="logo__slash" aria-hidden="true">/</span>
+        <span class="logo__role">vibe coder</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Головна навігація">
+        <a href="#about">про мене</a>
+        <a href="#stack">стек</a>
+        <a href="#work">робота</a>
+        <a href="#principles">принципи</a>
+        <a href="#contact">контакт</a>
+        <a class="nav__ext" href="https://github.com/vdoxxy" target="_blank" rel="noopener">
+          github <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <span class="hero__spark hero__spark--a" aria-hidden="true">✳</span>
+      <span class="hero__spark hero__spark--b" aria-hidden="true">+</span>
+      <span class="hero__spark hero__spark--c" aria-hidden="true">✳</span>
+
+      <div class="container hero__inner">
+        <div class="hero__top">
+          <p class="status">
+            <span class="status__dot" aria-hidden="true"></span>
+            відкритий до колаборацій та тестів
+          </p>
+          <p class="hero__loc" aria-label="Досвід: три місяці">3 місяці в коді</p>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__line">Роблю гру.</span>
+          <span class="hero__line hero__line--acid">Пишу код.</span>
+          <span class="hero__line hero__line--outline">Вчуся на ходу.</span>
+        </h1>
+
+        <div class="hero__bottom">
+          <div class="hero__intro">
+            <p class="hero__lead">
+              Я <strong>vdoxxy</strong> — вайбкодер та інді-розробник.
+              Пишу на Python, Java і C++, зараз роблю свою першу гру
+              на Unity та вчу Blender. Не прикидаюсь сеньйором —
+              показую, що вже вмію, і що будую далі.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--acid" href="#work">Що я будую <span aria-hidden="true">↓</span></a>
+              <a class="btn" href="https://github.com/vdoxxy" target="_blank" rel="noopener">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <figure class="portrait" data-parallax="0.07">
+            <div class="portrait__frame">
+              <img src="assets/avatar.jpg" alt="Аватар vdoxxy" width="460" height="460" />
+              <span class="portrait__tape" aria-hidden="true"></span>
+              <span class="portrait__sticker">в процесі</span>
+            </div>
+            <figcaption class="portrait__caption">
+              <span>vdoxxy</span>
+              <span>indie dev / vibe coder</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>python</span><span>✳</span><span>java</span><span>✳</span><span>c++</span><span>✳</span>
+          <span>unity</span><span>✳</span><span>blender</span><span>✳</span><span>vibe coding</span><span>✳</span>
+          <span>indie game</span><span>✳</span><span>python</span><span>✳</span><span>java</span><span>✳</span>
+          <span>c++</span><span>✳</span><span>unity</span><span>✳</span><span>blender</span><span>✳</span>
+          <span>vibe coding</span><span>✳</span><span>indie game</span><span>✳</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="split__side reveal">
+          <p class="kicker"><span>01</span> про мене</p>
+        </div>
+
+        <div class="split__body">
+          <h2 class="reveal">Три місяці в коді. Перші моди. Перша гра.</h2>
+
+          <div class="about__text reveal">
+            <p>
+              Я вайбкодер: беру ідею і одразу перетворюю її на щось робоче —
+              скрипт, механіку, маленький прототип. Мені цікавіше побачити,
+              як воно оживає на екрані, ніж три тижні вибирати архітектуру.
+            </p>
+            <p>
+              За три місяці потроху розібрався з <strong>Python</strong>,
+              <strong>Java</strong> і <strong>C++</strong>, зробив два моди
+              для Minecraft, почав першу гру на <strong>Unity</strong> —
+              розбираюся з картами та анімацією персонажів.
+              <strong>Blender</strong> поки вивчаю з основ, щоб намагатися
+              робити моделі для гри самому.
+            </p>
+            <p>
+              Досвіду в мене небагато — і я цього не ховаю. Тому тут усе
+              без гучних слів: те, що вже вийшло, і те, що ще попереду.
+              Зате є щоденна практика й бажання розібратися.
+            </p>
+          </div>
+
+          <blockquote class="quote reveal">
+            «Краще маленький робочий прототип, ніж ідеальний план,
+            який так і залишився в голові.»
+          </blockquote>
+
+          <dl class="facts reveal">
+            <div class="fact">
+              <dt>у програмуванні</dt>
+              <dd>3 місяці</dd>
+            </div>
+            <div class="fact">
+              <dt>мови в роботі</dt>
+              <dd>Python · Java · C++</dd>
+            </div>
+            <div class="fact">
+              <dt>перші проєкти</dt>
+              <dd>2 моди · 1 гра</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section section--line" id="stack">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker"><span>02</span> стек</p>
+          <h2>Чим користуюсь щодня</h2>
+          <p class="section__sub">
+            Поки без точних рівнів і гучних слів — просто чесно: що вже
+            практикую, а що тільки починаю.
+          </p>
+        </div>
+
+        <ul class="stack">
+          <li class="stack__row reveal">
+            <span class="stack__name">Python</span>
+            <span class="stack__note">Скрипти, автоматизація, навчальні проєкти</span>
+            <span class="stack__level stack__level--work">практикую</span>
+          </li>
+          <li class="stack__row reveal">
+            <span class="stack__name">Java</span>
+            <span class="stack__note">Моди для Minecraft, перші проєкти</span>
+            <span class="stack__level stack__level--work">2 моди</span>
+          </li>
+          <li class="stack__row reveal">
+            <span class="stack__name">C++</span>
+            <span class="stack__note">Основи мови</span>
+            <span class="stack__level">вивчаю основи</span>
+          </li>
+          <li class="stack__row reveal">
+            <span class="stack__name">Unity</span>
+            <span class="stack__note">Створення карт, анімація персонажів</span>
+            <span class="stack__level">розбираюся</span>
+          </li>
+          <li class="stack__row reveal">
+            <span class="stack__name">Blender</span>
+            <span class="stack__note">Основи 3D-моделювання для гри</span>
+            <span class="stack__level">вивчаю основи</span>
+          </li>
+          <li class="stack__row reveal">
+            <span class="stack__name">Git · GitHub</span>
+            <span class="stack__note">Версії та публікація проєктів</span>
+            <span class="stack__level">вчуся</span>
+          </li>
+        </ul>
+
+        <div class="tools reveal">
+          <span class="tools__label">поруч:</span>
+          <span>VS Code</span>
+          <span>GitHub</span>
+          <span>Modrinth</span>
+          <span>Unity Hub</span>
+          <span>Google</span>
+          <span>документація</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker"><span>03</span> робота</p>
+          <h2>Що вже є і що будую</h2>
+          <p class="section__sub">
+            Поки тут небагато: два моди для Minecraft і перша гра в процесі.
+            Краще так, ніж десять покинутих папок.
+          </p>
+        </div>
+
+        <article class="work reveal">
+          <div class="work__poster" aria-hidden="true">
+            <span class="work__grid"></span>
+            <span class="work__wip">WIP</span>
+            <span class="work__poster-line">build 0.0.1</span>
+            <span class="work__poster-line work__poster-line--b">unity / blender</span>
+            <span class="work__plus work__plus--a">+</span>
+            <span class="work__plus work__plus--b">+</span>
+            <span class="work__plus work__plus--c">+</span>
+          </div>
+
+          <div class="work__body">
+            <div class="work__tags">
+              <span class="tag tag--acid">в розробці</span>
+              <span class="tag">Unity</span>
+              <span class="tag">Blender</span>
+            </div>
+            <h3 class="work__title">Перша інді-гра</h3>
+            <p class="work__text">
+              Вчуся на реальному проєкті: роблю карту, розбираюся з анімацією
+              персонажів, а моделі намагаюся робити сам у Blender. Мета — не
+              «ідеальна гра», а прототип, у який можна пограти й показати іншим.
+            </p>
+
+            <ol class="work__plan">
+              <li><span>01</span> Карта та основа сцени</li>
+              <li><span>02</span> Анімація персонажа</li>
+              <li><span>03</span> Моделі в Blender</li>
+              <li><span>04</span> Збірка й перший публічний білд</li>
+            </ol>
+
+            <p class="work__note">
+              Деталей поки не розкриваю — покажу, коли буде що показати.
+            </p>
+          </div>
+        </article>
+
+        <div class="mods">
+          <article class="mod reveal">
+            <div class="mod__top">
+              <span class="tag tag--acid">зроблено</span>
+              <span class="mod__code">MOD-02 / JAVA</span>
+            </div>
+            <h3 class="mod__title">Без затримки Mace</h3>
+            <p class="mod__text">
+              Другий мод для Minecraft і поки найцікавіший: прибирає затримку
+              між ударами Mace. Для PvP це відчувається одразу — порівнюю
+              з іншими модами на оптимізацію, різниця є.
+            </p>
+            <ul class="mod__tags">
+              <li>Java</li><li>Minecraft</li><li>PvP</li>
+            </ul>
+            <a class="mod__link" href="https://github.com/vdoxxy" target="_blank" rel="noopener">
+              Профіль на GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="mod reveal">
+            <div class="mod__top">
+              <span class="tag">перший</span>
+              <span class="mod__code">MOD-01 / JAVA</span>
+            </div>
+            <h3 class="mod__title">Перший мод для Minecraft</h3>
+            <p class="mod__text">
+              Перша проба пера: простий мод, який допоміг зрозуміти, як моди
+              влаштовані зсередини. Без гучних слів — але він є.
+            </p>
+            <ul class="mod__tags">
+              <li>Java</li><li>Minecraft</li>
+            </ul>
+            <a class="mod__link" href="https://github.com/vdoxxy" target="_blank" rel="noopener">
+              Профіль на GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="links">
+          <a class="link-card reveal" href="https://github.com/vdoxxy" target="_blank" rel="noopener">
+            <span class="link-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.55v-2.2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.15v3.18c0 .3.21.67.8.55A11.5 11.5 0 0 0 12 .5z"/>
+              </svg>
+            </span>
+            <span class="link-card__body">
+              <span class="link-card__title">GitHub</span>
+              <span class="link-card__text">Код, експерименти та майбутні репозиторії гри</span>
+            </span>
+            <span class="link-card__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="link-card reveal" href="https://modrinth.com/user/vdoxxy" target="_blank" rel="noopener">
+            <span class="link-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.5 21 7v10l-9 4.5L3 17V7z" />
+                <path d="M3 7l9 4.5L21 7M12 11.5v10" />
+              </svg>
+            </span>
+            <span class="link-card__body">
+              <span class="link-card__title">Modrinth</span>
+              <span class="link-card__text">Профіль для майбутніх модів і релізів</span>
+            </span>
+            <span class="link-card__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="section section--line" id="principles">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker"><span>04</span> принципи</p>
+          <h2>Як я працюю</h2>
+        </div>
+
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="principle__num">01</span>
+            <h3>Спочатку зробити — потім ідеалізувати</h3>
+            <p>
+              Робочий прототип краще показує проблему, ніж година роздумів.
+              Далі вже видно, що варто переписати, а що й так працює.
+            </p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle__num">02</span>
+            <h3>Не знаєш — питай і читай</h3>
+            <p>
+              Документація, форуми, чужі репозиторії. Не соромно не знати —
+              соромно вдавати, що знаєш, і робити навмання.
+            </p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle__num">03</span>
+            <h3>Показувати процес, а не тільки результат</h3>
+            <p>
+              Веду профілі, де видно шлях: що вийшло, що зламалось і як
+              я це полагодив. Так чесніше — і так видно реальний рівень.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact__head">
+            <p class="kicker"><span>05</span> контакт</p>
+            <h2 class="contact__title">Давайте<br />познайомимось.</h2>
+          </div>
+
+          <div class="contact__body">
+            <p class="contact__text">
+              Відкритий до колаборацій, тестування, порад і просто розмов
+              про код та ігри. Найшвидше — через GitHub або Modrinth.
+            </p>
+
+            <div class="contact__actions">
+              <a class="btn btn--acid" href="https://github.com/vdoxxy" target="_blank" rel="noopener">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <a class="btn" href="https://modrinth.com/user/vdoxxy" target="_blank" rel="noopener">
+                Modrinth <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <p class="contact__sign">
+              <span>vdoxxy</span>
+              <span>пишу код · будую гру · вчуся далі</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> vdoxxy</p>
+      <p class="footer__note">зроблено на вайбі, перевірено очима</p>
+      <a href="#top">нагору ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

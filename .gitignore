@@ -1,0 +1,8 @@
+# системні файли
+.DS_Store
+Thumbs.db
+
+# тимчасові файли
+_preview.html
+*.log
+node_modules/
