@@ -18,7 +18,8 @@ assets/avatar.jpg — аватар
 Зараз на сайті:
 
 - **vdoxxy** — вайбкодер та інді-розробник;
-- Python, Java, C++, Unity, Blender;
+- Python, Java, C++, C#, Unity, Blender;
+- знайомлюся з HTML і CSS;
 - досвід — 3 місяці;
 - два моди для Minecraft (другий — проти затримки Mace у PvP);
 - перша гра в процесі: карта, анімація персонажів, моделі в Blender;
