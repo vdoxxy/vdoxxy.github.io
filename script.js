@@ -296,17 +296,17 @@ document.documentElement.classList.add('js');
       let lastTime = 0;
 
       function createDrop(initial) {
-        const len = 7 + Math.random() * 16;
+        const len = 8 + Math.random() * 20;
 
         return {
           x: Math.random() * rainWidth,
           y: initial ? Math.random() * rainHeight : -30 - Math.random() * 120,
           len: len,
-          speed: 140 + Math.random() * 240,
+          speed: 150 + Math.random() * 260,
           tilt: -(2 + Math.random() * 7),
-          alpha: 0.04 + Math.random() * 0.14,
+          alpha: 0.09 + Math.random() * 0.2,
           cream: Math.random() < 0.22,
-          width: Math.random() < 0.18 ? 1.2 : 0.7
+          width: Math.random() < 0.2 ? 1.5 : 0.9
         };
       }
 
@@ -314,11 +314,11 @@ document.documentElement.classList.add('js');
         return {
           x: Math.random() * rainWidth,
           y: initial ? Math.random() * rainHeight : -40 - Math.random() * 80,
-          size: 9 + Math.random() * 9,
+          size: 10 + Math.random() * 9,
           speed: 26 + Math.random() * 36,
           angle: Math.random() * Math.PI * 2,
           spin: (Math.random() - 0.5) * 0.9,
-          alpha: 0.07 + Math.random() * 0.13,
+          alpha: 0.12 + Math.random() * 0.18,
           char: Math.random() < 0.6 ? '✳' : '+'
         };
       }
@@ -331,7 +331,7 @@ document.documentElement.classList.add('js');
         rainCanvas.height = Math.floor(rainHeight * dpr);
         rainCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        const count = Math.round(Math.min(130, Math.max(38, rainWidth / 12)));
+        const count = Math.round(Math.min(155, Math.max(42, rainWidth / 10.5)));
         drops = Array.from({ length: count }, function () { return createDrop(true); });
         sparks = Array.from(
           { length: rainWidth > 900 ? 5 : 3 },
@@ -358,7 +358,7 @@ document.documentElement.classList.add('js');
           rainCtx.beginPath();
           rainCtx.lineWidth = drop.width;
           rainCtx.strokeStyle = drop.cream
-            ? 'rgba(242, 240, 233, ' + (drop.alpha * 0.65).toFixed(3) + ')'
+            ? 'rgba(242, 240, 233, ' + (drop.alpha * 0.75).toFixed(3) + ')'
             : 'rgba(217, 255, 75, ' + drop.alpha.toFixed(3) + ')';
           rainCtx.moveTo(drop.x, drop.y);
           rainCtx.lineTo(drop.x - drop.tilt, drop.y - drop.len);

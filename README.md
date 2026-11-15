@@ -21,7 +21,9 @@ assets/avatar.jpg — аватар
 - Python, Java, C++, C#, Unity, Blender;
 - знайомлюся з HTML і CSS;
 - досвід — 3 місяці;
-- два моди для Minecraft (другий — проти затримки Mace у PvP);
+- два Fabric-моди для Minecraft: **Mace Optimizer PRO** (прибирає
+  затримку Mace у PvP) і **ClumsyCraft** (діагностика мережі);
+- обидва моди зараз на розгляді на Modrinth;
 - перша гра в процесі: карта, анімація персонажів, моделі в Blender;
 - посилання на GitHub і Modrinth.
 
