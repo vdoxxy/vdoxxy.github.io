@@ -22,7 +22,8 @@ assets/avatar.jpg — аватар
 - знайомлюся з HTML і CSS;
 - досвід — 3 місяці;
 - два Fabric-моди для Minecraft: **Mace Optimizer PRO** (прибирає
-  затримку Mace у PvP) і **ClumsyCraft** (діагностика мережі);
+  затримку Mace у PvP) і **ClumsyCraft** (симуляція поганого з'єднання
+  для тестів на приватних серверах);
 - обидва моди зараз на розгляді на Modrinth;
 - код модів відкритий:
   `github.com/vdoxxy/mace-optimizer-pro` і `github.com/vdoxxy/clumsycraft`;
